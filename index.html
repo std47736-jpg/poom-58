@@ -1,1 +1,346 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Burger - ร้านเบอร์เกอร์อร่อยที่สุด</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-orange-600">
+                        👑 King Burger
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">หน้าแรก</a>
+                        <a href="#menu" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">เมนู</a>
+                        <a href="#about" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">เกี่ยวกับเรา</a>
+                        <a href="#contact" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">ติดต่อ</a>
+                    </div>
+                </div>
+                <button class="btn-primary text-white px-6 py-2 rounded-full font-medium">
+                    สั่งออนไลน์
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-16 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+                    King Burger
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                    เบอร์เกอร์สุดอร่อยที่จะทำให้คุณเป็นราชาแห่งรสชาติ
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToMenu()" class="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
+                        ดูเมนู
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors">
+                        สั่งเดลิเวอรี่
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">เมนูแนะนำ</h2>
+                <p class="text-xl text-gray-600">เบอร์เกอร์พรีเมียมที่ทำจากวัตถุดิบคุณภาพสูง</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <div class="text-6xl">🍔</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">King Classic</h3>
+                        <p class="text-gray-600 mb-4">เบอร์เกอร์คลาสสิกกับเนื้อวัวแท้ 100% ชีสเชดดาร์ และซอสพิเศษ</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿189</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                        <div class="text-6xl">🍔</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Royal Deluxe</h3>
+                        <p class="text-gray-600 mb-4">เบอร์เกอร์หรูหราพร้อมเบคอน เห็ด และชีสสวิส</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿249</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <div class="text-6xl">🍔</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Spicy King</h3>
+                        <p class="text-gray-600 mb-4">เบอร์เกอร์รสเผ็ดร้อนกับพริกฮาลาปีโญ่และซอสเผ็ด</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿199</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <div class="text-6xl">🍟</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">King Fries</h3>
+                        <p class="text-gray-600 mb-4">เฟรนช์ฟรายส์กรอบนอกนุ่มในพร้อมเกลือทะเล</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿89</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+                        <div class="text-6xl">🥤</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">King Shake</h3>
+                        <p class="text-gray-600 mb-4">มิลค์เชคหวานเย็นรสวานิลลาและช็อกโกแลต</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿79</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
+                        <div class="text-6xl">🍗</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chicken Wings</h3>
+                        <p class="text-gray-600 mb-4">ปีกไก่ทอดกรอบเสิร์ฟพร้อมซอสบาร์บีคิว</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-600">฿149</span>
+                            <button class="btn-primary text-white px-4 py-2 rounded-full font-medium">
+                                สั่งเลย
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">เกี่ยวกับ King Burger</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        King Burger เป็นร้านอาหารที่มุ่งมั่นในการนำเสนอเบอร์เกอร์คุณภาพสูงที่ทำจากวัตถุดิบสดใหม่และเนื้อวัวแท้ 100% 
+                        เราเชื่อว่าอาหารอร่อยเริ่มต้นจากวัตถุดิบที่ดี
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        ด้วยประสบการณ์กว่า 10 ปีในวงการอาหาร เราได้พัฒนาสูตรเฉพาะที่จะทำให้คุณได้สัมผัสกับรสชาติที่ไม่เหมือนใคร
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600">10+</div>
+                            <div class="text-gray-600">ปีประสบการณ์</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600">50K+</div>
+                            <div class="text-gray-600">ลูกค้าพึงพอใจ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-80 h-80 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                        <div class="text-9xl">👑</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">ติดต่อเรา</h2>
+                <p class="text-xl text-gray-600">มาเยี่ยมชมร้านของเราหรือสั่งเดลิเวอรี่</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📍</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">ที่อยู่</h3>
+                    <p class="text-gray-600">123 ถนนสุขุมวิท แขวงคลองตัน<br>เขตวัฒนา กรุงเทพฯ 10110</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📞</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">โทรศัพท์</h3>
+                    <p class="text-gray-600">02-123-4567<br>089-123-4567</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⏰</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">เวลาเปิด-ปิด</h3>
+                    <p class="text-gray-600">จันทร์-อาทิตย์<br>10:00 - 22:00 น.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">
+                    สั่งเดลิเวอรี่ตอนนี้
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="text-2xl font-bold text-orange-600 mb-4">
+                        👑 King Burger
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        ร้านเบอร์เกอร์อร่อยที่สุดในเมือง ด้วยวัตถุดิบคุณภาพสูงและรสชาติที่ไม่เหมือนใคร
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">Line</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">เมนู</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">เบอร์เกอร์</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">เฟรนช์ฟรายส์</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">เครื่องดื่ม</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">ของหวาน</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">บริการ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">สั่งออนไลน์</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">เดลิเวอรี่</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">จองโต๊ะ</a></li>
+                        <li><a href="#" class="hover:text-orange-600 transition-colors">แฟรนไชส์</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 King Burger. สงวนลิขสิทธิ์ทุกประการ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToMenu() {
+            document.getElementById('menu').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add order functionality to buttons
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('สั่งเลย') || button.textContent.includes('สั่งออนไลน์') || button.textContent.includes('สั่งเดลิเวอรี่')) {
+                button.addEventListener('click', function() {
+                    alert('ขอบคุณสำหรับการสั่งซื้อ! ระบบจะเปลี่ยนเส้นทางไปยังหน้าสั่งอาหารในไม่ช้า');
+                });
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a3ff16e281893b',t:'MTc1NzA1NzE2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
 
